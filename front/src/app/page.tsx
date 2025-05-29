@@ -9,7 +9,7 @@ import { GithubModel } from "@/components/GithubIcon";
 
 const RotatingGithub = (props: JSX.IntrinsicElements["group"]) => {
 	const ref = useRef<Mesh>(null);
-	useFrame((state, delta) => {
+	useFrame((_, delta) => {
 		if (ref.current) {
 			ref.current.rotation.y += delta / 8;
 			ref.current.rotation.x += delta / 16;
@@ -71,9 +71,9 @@ const RotatingGithub = (props: JSX.IntrinsicElements["group"]) => {
 	);
 };
 
-const RotatingX = (props: JSX.IntrinsicElements["group"]) => {
+const RotatingX = () => {
 	const ref = useRef<Mesh>(null);
-	useFrame((state, delta) => {
+	useFrame((_state, delta) => {
 		if (ref.current) {
 			ref.current.rotation.y += delta / 6;
 			ref.current.rotation.x += delta / 6;
@@ -151,7 +151,6 @@ const PP3DText = () => {
 };
 
 const page = () => {
-	const ppRef = useRef<Mesh>(null);
 	return (
 		<>
 			<Canvas
