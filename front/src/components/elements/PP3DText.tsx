@@ -1,5 +1,5 @@
 import { getTextColor } from "@/app/util/getTextColor";
-import { Center, Text3D } from "@react-three/drei";
+import { Text3D } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import type { Mesh } from "three";
