@@ -23,7 +23,7 @@ export const RotatingGithub = (props: JSX.IntrinsicElements["group"]) => {
 		>
 			<GithubModel
 				position={[-5, -7, -7]}
-				scale={5}
+				scale={7}
 				castShadow
 				receiveShadow
 				onClick={"https://github.com/Shuhei-pp"}

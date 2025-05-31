@@ -18,7 +18,7 @@ export const RotatingX = () => {
 		<group ref={ref}>
 			<Text3D
 				font="/font/Light_Italic.json"
-				size={1}
+				size={1.5}
 				height={0.2}
 				bevelSize={0.05}
 				bevelThickness={0.1}
