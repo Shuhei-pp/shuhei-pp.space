@@ -1,42 +1,49 @@
 "use client";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Center, Stars } from "@react-three/drei";
-
-import { PP3DText } from "@/components/elements/PP3DText";
-import { RotatingGithub } from "@/components/elements/RotatingGithub";
-import { RotatingX } from "@/components/elements/RorationgX";
-import { PPIcon } from "@/components/elements/PPIcon";
+import Header from "@/components/Header";
 
 const page = () => {
 	return (
-		<>
-			<Canvas
-				shadows
-				camera={{ position: [0, 0, 10], fov: 50 }}
-				className="w-full h-screen"
-			>
-				<ambientLight intensity={Math.PI / 2} />
+		<div className="min-h-screen bg-black text-white">
+			<Header />
+			
+			{/* Main content */}
+			<div className="flex flex-col items-center justify-center min-h-screen p-8">
+				{/* Main heading */}
+				<div className="text-center mb-8">
+					<h1 className="text-4xl md:text-5xl font-light tracking-wider mb-4">
+						shuhei-pp
+					</h1>
+					<div className="w-32 h-0.5 bg-white mx-auto"></div>
+				</div>
 
-				<Stars depth={50} count={5000} factor={4} fade />
-				<spotLight
-					position={[10, 10, 10]}
-					angle={0.15}
-					penumbra={1}
-					decay={0}
-					intensity={Math.PI}
-				/>
+				{/* Self introduction */}
+				<div className="text-center mb-10 max-w-2xl px-4">
+					<p className="text-base md:text-lg text-gray-300 leading-relaxed">
+						I'm a software engineer who loves development.
+					</p>
+				</div>
 
-				<Center>
-					<PP3DText />
-					<PPIcon />
-				</Center>
-				<RotatingGithub />
-				<RotatingX />
-
-				<pointLight position={[10, 10, 10]} decay={0} intensity={Math.PI} />
-				<OrbitControls />
-			</Canvas>
-		</>
+				{/* Social links */}
+				<div className="flex flex-col sm:flex-row gap-6 mb-12">
+					<a
+						href="https://github.com/Shuhei-pp"
+						target="_blank"
+						rel="noreferrer"
+						className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all duration-300 text-center min-w-[120px]"
+					>
+						GitHub
+					</a>
+					<a
+						href="https://x.com/kota_shuping"
+						target="_blank"
+						rel="noreferrer"
+						className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all duration-300 text-center min-w-[120px]"
+					>
+						X
+					</a>
+				</div>
+			</div>
+		</div>
 	);
 };
 
