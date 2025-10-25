@@ -21,7 +21,7 @@ const SkillsPage = () => {
 		<div className="min-h-screen bg-black text-white">
 			<Header />
 			
-			<div className="pt-16 sm:pt-20 px-4 sm:px-8">
+			<div className="py-16 sm:py-20 px-4 sm:px-8">
 				<div className="max-w-6xl mx-auto">
 					{/* Mobile-First Header */}
 					<div className="text-center mb-12 sm:mb-16">
